@@ -1,10 +1,20 @@
 <h1>All Bookmarks:</h1>
 
 
-<ul>
-  <% @bookmarks.each do |bookmark| %>
-    <li><%= link_to bookmark.name, bookmark_path(bookmark) %></li>
-  <% end %>
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
 
-<%= link_to "New bookmark", new_bookmark_path  %>
+</table>
+<div class="card">
+  <p>
+    <% @bookmarks.each do |bookmark| %>
+      <li><%= link_to bookmark.name, bookmark_path(bookmark) %></li>
+    <% end %>
+  </p>
+
+  <%= link_to "New bookmark", new_bookmark_path  %>
+</div>

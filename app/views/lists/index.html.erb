@@ -1,6 +1,14 @@
 <h1>All lists:</h1>
 
 
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+</table>
 <ul>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>
